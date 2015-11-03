@@ -212,6 +212,10 @@ endfunction
 call AddCycleGroup('ruby', ['class', 'module'])
 call AddCycleGroup(['ruby', 'eruby', 'perl'], ['else', 'elsif'])
 call AddCycleGroup('python', ['else', 'elif'])
+call AddCycleGroup(['r', 'rnoweb'], ['TRUE', 'FALSE'])
+call AddCycleGroup('python', ['True', 'False'])
+call AddCycleGroup(['cpp'], ['true', 'false'])
+call AddCycleGroup(['on', 'off'])
 
 nnoremap <silent> <Plug>CycleNext     :<C-U>call <SID>Cycle(1)<CR>
 nnoremap <silent> <Plug>CyclePrevious :<C-U>call <SID>Cycle(-1)<CR>
